@@ -11,3 +11,9 @@ body {
 h1 {
   font-family: cursive;
 }
+#show-contact {
+  font-size: 150%;
+}
+#contacts {
+  font-size: 150%;
+}
