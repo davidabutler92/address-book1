@@ -1,3 +1,13 @@
 #show-contact {
   display: none;
 }
+
+body {
+  background-image: url(https://bit.ly/2JJFfGh);
+  background-size: auto;
+  color: black;
+}
+
+h1 {
+  font-family: cursive;
+}

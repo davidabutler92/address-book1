@@ -70,16 +70,22 @@ function showContact(contactId) {
   buttons.append("<button class='deleteButton' id=" +  + contact.id + ">Delete</button>");
 }
 
-function attachEventListeners() {
+function attachContactListeners() {
   $("ul#contacts").on("click", "li", function() {
     showContact(this.id); 
+    //NEW CODE 
+    $("#buttons").on("click", ".deleteButton", function() {
+      addressBook.deleteContact(this.id);
+      $("#show-contact").hide();
+      displayContactDetails(addressBook);
+    });
   });
 };
 
 
 
 $(document).ready(function() {
-  attachEventListeners();
+  attachContactListeners();
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
     var inputtedFirstName = $("input#new-first-name").val();
